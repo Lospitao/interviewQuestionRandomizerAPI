@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Controller\v1\QuestionsAndAnswers;
+namespace App\Controller\v1\Questions;
 
 
-use App\Entity\InterviewItem;
+use App\Entity\Question;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -18,7 +18,7 @@ class createNewQuestionAndAnswerController extends AbstractController
 
 
     /**
-     * @Route("/v1/QuestionsAndAnswers/create", name="createQuestionAndAnswerController" )
+     * @Route("/v1/Questions/create", name="createQuestionAndAnswerController" )
      * @return JsonResponse
      */
     public function createNewQuestionAndAnswer()
@@ -27,10 +27,7 @@ class createNewQuestionAndAnswerController extends AbstractController
 
             $this->createNewQuestionAndAnswerService();
             $this->persistToRepository();
-            $this->createQandACreationSuccessMessage();
-            $response = new JsonResponse([
-                'uuid' => $this->uuid,
-            ]);
+            $response = $this->createJsonResponse();
             return $response;
 
         } catch (Exception $exception) {
@@ -38,7 +35,6 @@ class createNewQuestionAndAnswerController extends AbstractController
             return $jsonResponseWithError;
         }
     }
-
 
     private function createNewQuestionAndAnswerService()
     {
@@ -48,7 +44,7 @@ class createNewQuestionAndAnswerController extends AbstractController
 
     private function createNewQandA()
     {
-        $this->createdQandA = new InterviewItem();
+        $this->createdQandA = new Question();
     }
 
     private function setUuid()
@@ -63,14 +59,18 @@ class createNewQuestionAndAnswerController extends AbstractController
         $entity_manager->persist($this->createdQandA);
         $entity_manager->flush();
     }
-    private function createQandACreationSuccessMessage()
-    {
-        $this->addFlash('success', 'Has creado un nuevo elemento. Edita los campos de pregunta y respuesta');
-    }
+
     private function createJsonResponseWithError(\Exception $exception)
     {
         $response = new JsonResponse();
         $response->setStatusCode(JsonResponse::HTTP_NO_CONTENT);
         return $response;
+    }
+
+    private function createJsonResponse()
+    {
+        return new JsonResponse([
+            'uuid' => $this->uuid,
+        ]);
     }
 }

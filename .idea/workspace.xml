@@ -19,10 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ce9f03b0-63b8-4ba6-a653-bf27a5104c88" name="Default Changelist" comment="">
-      Randomizer Web Service #4      <change afterPath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/play/randomizerForQuestionsAndAnswersController.php" afterDir="false" />
+    <list default="true" id="ce9f03b0-63b8-4ba6-a653-bf27a5104c88" name="Default Changelist" comment="Randomizer Web Service #4">
+      <change afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/getQuestionAnswerController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/randomizerForQuestionsAndAnswersController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Entity/Question.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Repository/QuestionRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/createNewQuestionAndAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/createNewQuestionAndAnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/editQuestionAndAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/editQuestionAndAnswerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/play/randomizerForQuestionsAndAnswersController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/InterviewItem.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Repository/InterviewItemRepository.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,10 +128,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../interviewQuestionsRandomizer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers" />
+      <recent name="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/randomize" />
       <recent name="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/play" />
       <recent name="$PROJECT_DIR$/src/Controller/v1" />
       <recent name="$PROJECT_DIR$/src/Controller" />
@@ -146,6 +156,9 @@
       <workItem from="1628844596408" duration="95000" />
       <workItem from="1629107663192" duration="10501000" />
       <workItem from="1629192792631" duration="1761000" />
+      <workItem from="1629221862708" duration="1035000" />
+      <workItem from="1629275785921" duration="10932000" />
+      <workItem from="1629362780806" duration="8094000" />
     </task>
     <task id="LOCAL-00001" summary="Interview-Item Entity &gt; Each interview item represents a question-answear set with a category #1">
       <created>1628844469906</created>
@@ -191,17 +204,18 @@
     <MESSAGE value="Interview-Item Entity &gt; Each interview item represents a question-answear set with a category #1" />
     <MESSAGE value="Interview-Item Creation &gt; As a user, I can create a new Interview Item from the Index Page #2" />
     <MESSAGE value="Interview-Item Edition &gt; As a user I can modify the newly created Item adding a category, a question and an answear #3" />
-    <option name="LAST_COMMIT_MESSAGE" value="Interview-Item Edition &gt; As a user I can modify the newly created Item adding a category, a question and an answear #3" />
+    <MESSAGE value="Randomizer Web Service #4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Randomizer Web Service #4" />
   </component>
   <component name="WindowStateProjectService">
     <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628691616720">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1628691616720" />
-    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629109076211">
+    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629365278667">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1629109076211" />
+    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1629365278667" />
     <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1628848660394">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
@@ -218,9 +232,9 @@
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
     <state x="877" y="421" width="238" height="271" key="MultipleFileMergeDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1628844782977" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1628845568353">
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1629209996253">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1628845568353" />
+    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1629209996253" />
   </component>
 </project>

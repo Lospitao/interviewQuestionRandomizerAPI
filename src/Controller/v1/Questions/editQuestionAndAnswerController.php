@@ -1,7 +1,7 @@
 <?php
-namespace App\Controller\v1\QuestionsAndAnswers;
+namespace App\Controller\v1\Questions;
 
-use App\Entity\InterviewItem;
+use App\Entity\Question;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\{Config\Definition\Exception\Exception,
     HttpFoundation\JsonResponse,
@@ -13,10 +13,10 @@ class editQuestionAndAnswerController extends AbstractController
     var $questionAnswerItem;
     var $category;
     var $question;
-    var $answear;
+    var $answer;
 
     /**
-     * @Route("/v1/QuestionsAndAnswers/{uuid}", name="editQuestionAndAnswerController" )
+     * @Route("/v1/Questions/{uuid}/edit", name="editQuestionAndAnswerController" )
      * @param $uuid
      * @param Request $request
      * @return JsonResponse
@@ -24,10 +24,10 @@ class editQuestionAndAnswerController extends AbstractController
     public function editNewQuestionAndAnswer(Request $request,$uuid) {
         try {
 
-            $this->getQuestionAnswearItem($uuid);
+            $this->questionAnswerItem = $this->getQuestionAnswerItem($uuid);
             $this->category = $this->getCategoryToSave($request);
             $this->question = $this->getQuestionToSave($request);
-            $this->answear = $this->getAnswearToSave($request);
+            $this->answer = $this->getAnswerToSave($request);
             if ($this->questionAnswerItem) {
                 if($this->category) {
                     $this->saveCategory();
@@ -35,8 +35,8 @@ class editQuestionAndAnswerController extends AbstractController
                 if($this->question) {
                     $this->saveQuestion();
                 }
-                if($this->answear) {
-                    $this->saveAnswear();
+                if($this->answer) {
+                    $this->saveAnswer();
                 }
                 $this->persistNewDataToDataBase();
             }
@@ -58,10 +58,10 @@ class editQuestionAndAnswerController extends AbstractController
         return $response;
     }
 
-    private function getQuestionAnswearItem($uuid)
+    private function getQuestionAnswerItem($uuid)
     {
-        $this->questionAnswerItem =$this->getDoctrine()
-            ->getRepository(InterviewItem::class)
+        return $this->getDoctrine()
+            ->getRepository(Question::class)
             ->findOneBy(['uuid' => $uuid]);
     }
 
@@ -75,9 +75,9 @@ class editQuestionAndAnswerController extends AbstractController
         return $request->request->get('question');
     }
 
-    private function getAnswearToSave(Request $request)
+    private function getAnswerToSave(Request $request)
     {
-        return $request->request->get('answear');
+        return $request->request->get('answer');
     }
 
     private function saveCategory()
@@ -90,9 +90,9 @@ class editQuestionAndAnswerController extends AbstractController
         $this->questionAnswerItem->setQuestion($this->question);
     }
 
-    private function saveAnswear()
+    private function saveAnswer()
     {
-        $this->questionAnswerItem->setAnswear($this->answear);
+        $this->questionAnswerItem->setAnswer($this->answer);
     }
 
     private function persistNewDataToDataBase()

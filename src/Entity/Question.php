@@ -2,13 +2,13 @@
 
 namespace App\Entity;
 
-use App\Repository\InterviewItemRepository;
+use App\Repository\QuestionRepository;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass=InterviewItemRepository::class)
+ * @ORM\Entity(repositoryClass=QuestionRepository::class)
  */
-class InterviewItem
+class Question
 {
     /**
      * @ORM\Id
@@ -18,6 +18,11 @@ class InterviewItem
     private $id;
 
     /**
+     * @ORM\Column(type="guid")
+     */
+    private $uuid;
+
+    /**
      * @ORM\Column(type="text", nullable=true)
      */
     private $question;
@@ -25,12 +30,7 @@ class InterviewItem
     /**
      * @ORM\Column(type="text", nullable=true)
      */
-    private $answear;
-
-    /**
-     * @ORM\Column(type="guid")
-     */
-    private $uuid;
+    private $answer;
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -42,30 +42,6 @@ class InterviewItem
         return $this->id;
     }
 
-    public function getQuestion(): ?string
-    {
-        return $this->question;
-    }
-
-    public function setQuestion(string $question): self
-    {
-        $this->question = $question;
-
-        return $this;
-    }
-
-    public function getAnswear(): ?string
-    {
-        return $this->answear;
-    }
-
-    public function setAnswear(string $answear): self
-    {
-        $this->answear = $answear;
-
-        return $this;
-    }
-
     public function getUuid(): ?string
     {
         return $this->uuid;
@@ -74,6 +50,30 @@ class InterviewItem
     public function setUuid(string $uuid): self
     {
         $this->uuid = $uuid;
+
+        return $this;
+    }
+
+    public function getQuestion(): ?string
+    {
+        return $this->question;
+    }
+
+    public function setQuestion(?string $question): self
+    {
+        $this->question = $question;
+
+        return $this;
+    }
+
+    public function getAnswer(): ?string
+    {
+        return $this->answer;
+    }
+
+    public function setAnswer(?string $answer): self
+    {
+        $this->answer = $answer;
 
         return $this;
     }
