@@ -24,12 +24,10 @@ class createNewQuestionAndAnswerController extends AbstractController
     public function createNewQuestionAndAnswer()
     {
         try {
-
             $this->createNewQuestionAndAnswerService();
             $this->persistToRepository();
             $response = $this->createJsonResponse();
             return $response;
-
         } catch (Exception $exception) {
             $jsonResponseWithError = $this->createJsonResponseWithError($exception);
             return $jsonResponseWithError;

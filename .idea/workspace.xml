@@ -16,21 +16,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:develop" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ce9f03b0-63b8-4ba6-a653-bf27a5104c88" name="Default Changelist" comment="Randomizer Web Service #4">
-      <change afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/getQuestionAnswerController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/randomizerForQuestionsAndAnswersController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Entity/Question.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Repository/QuestionRepository.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/createNewQuestionAndAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/createNewQuestionAndAnswerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/editQuestionAndAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/editQuestionAndAnswerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/v1/QuestionsAndAnswers/play/randomizerForQuestionsAndAnswersController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Entity/InterviewItem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Repository/InterviewItemRepository.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/v1/Questions/createNewQuestionAndAnswerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/v1/Questions/createNewQuestionAndAnswerController.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +126,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../prueba.php" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -159,6 +157,13 @@
       <workItem from="1629221862708" duration="1035000" />
       <workItem from="1629275785921" duration="10932000" />
       <workItem from="1629362780806" duration="8094000" />
+      <workItem from="1629975835869" duration="86000" />
+      <workItem from="1630064467824" duration="1448000" />
+      <workItem from="1641812079462" duration="4210000" />
+      <workItem from="1641827169697" duration="73000" />
+      <workItem from="1641827793147" duration="44000" />
+      <workItem from="1642086271340" duration="2534000" />
+      <workItem from="1642098448328" duration="4000" />
     </task>
     <task id="LOCAL-00001" summary="Interview-Item Entity &gt; Each interview item represents a question-answear set with a category #1">
       <created>1628844469906</created>
@@ -208,33 +213,17 @@
     <option name="LAST_COMMIT_MESSAGE" value="Randomizer Web Service #4" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1628691616720">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1642088305073">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="591" y="215" width="800" height="684" key="#com.intellij.execution.impl.EditConfigurationsDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1628691616720" />
-    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1629365278667">
+    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1642088305073" />
+    <state x="2580" y="418" key="run.anything.popup" timestamp="1641827178738">
+      <screen x="1920" y="332" width="1920" height="1080" />
+    </state>
+    <state x="2580" y="418" key="run.anything.popup/1920.332.1920.1080/0.359.1920.721@1920.332.1920.1080" timestamp="1641827178738" />
+    <state x="660" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1642087225541">
       <screen x="72" y="27" width="1848" height="1053" />
     </state>
-    <state x="72" y="27" width="734" height="1053" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1629365278667" />
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1628848660394">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="729" y="311" width="524" height="491" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1628848660394" />
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1629192812284">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl/72.27.1848.1053@72.27.1848.1053" timestamp="1629192812284" />
-    <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1628691603723">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state width="263" height="500" key="HiddenNamespacesPopup/72.27.1848.1053@72.27.1848.1053" timestamp="1628691603723" />
-    <state x="877" y="421" width="238" height="271" key="MultipleFileMergeDialog" timestamp="1628844782977">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="877" y="421" width="238" height="271" key="MultipleFileMergeDialog/72.27.1848.1053@72.27.1848.1053" timestamp="1628844782977" />
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2" timestamp="1629209996253">
-      <screen x="72" y="27" width="1848" height="1053" />
-    </state>
-    <state x="591" y="289" width="800" height="535" key="Vcs.Push.Dialog.v2/72.27.1848.1053@72.27.1848.1053" timestamp="1629209996253" />
+    <state x="660" y="196" width="670" height="676" key="search.everywhere.popup/72.27.1848.1053@72.27.1848.1053" timestamp="1642087225541" />
   </component>
 </project>
