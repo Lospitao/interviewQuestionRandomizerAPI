@@ -2,17 +2,16 @@
     "name": "lauralospitao/interview-question-randomizer-api",
     "description": "Api for Interview Question Randomizer API",
     "type": "library",
-    "autoload": {
-        "psr-4": {
-            "interviewQuestionRandomizerApi\\": "src/"
-        }
-    },
     "authors": [
         {
             "name": "Laura Lospitao",
             "email": "lauralospitao@gmail.com"
         }
     ],
-    "minimum-stability": "stable",
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "interviewQuestionRandomizerApi\\": "src/"
+        }
+    }
 }
