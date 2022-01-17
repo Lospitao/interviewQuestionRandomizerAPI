@@ -166,6 +166,7 @@
       <workItem from="1642086271340" duration="2534000" />
       <workItem from="1642098448328" duration="4000" />
       <workItem from="1642157850789" duration="5431000" />
+      <workItem from="1642410997662" duration="334000" />
     </task>
     <task id="LOCAL-00001" summary="Interview-Item Entity &gt; Each interview item represents a question-answear set with a category #1">
       <created>1628844469906</created>
@@ -230,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1642162351888</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Update Library settings">
+      <created>1642411328421</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1642411328421</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +275,8 @@
     <MESSAGE value="Interview-Item Edition &gt; As a user I can modify the newly created Item adding a category, a question and an answear #3" />
     <MESSAGE value="Randomizer Web Service #4" />
     <MESSAGE value="Api Library set up" />
-    <option name="LAST_COMMIT_MESSAGE" value="Api Library set up" />
+    <MESSAGE value="Update Library settings" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Library settings" />
   </component>
   <component name="WindowStateProjectService">
     <state x="779" y="311" width="424" height="491" key="FileChooserDialogImpl" timestamp="1642158063232">
